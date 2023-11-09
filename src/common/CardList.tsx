@@ -19,8 +19,9 @@ const CardList = async () => {
 
   const breedList = Object.keys(data.message);
 
-  return breedList.map((breed) => 
-  <div key={breed}>{breed}</div>);
+  return breedList.map((breedName) => (
+    <Card breedName={breedName} key={breedName}/>
+  ));
 };
 
 export default CardList;
