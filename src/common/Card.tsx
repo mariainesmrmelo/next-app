@@ -16,7 +16,6 @@ async function getData(breedName: string) {
 
 export interface Props {
   breedName: string;
-  breedImage: string;
 }
 
 const Card: React.FC<Props> = async ({ breedName }) => {
@@ -30,8 +29,8 @@ const Card: React.FC<Props> = async ({ breedName }) => {
         className=""
         src={breedImage}
         alt="Sunset in the mountains"
-        width={48}
-        height={48}
+        width={100}
+        height={100}
       />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{breedName}</div>
@@ -41,6 +40,11 @@ const Card: React.FC<Props> = async ({ breedName }) => {
           nihil.
         </p>
       </div>
+      <div className="px-6 pt-4 pb-2">
+    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+  </div>
     </div>
   );
 };

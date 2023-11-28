@@ -19,9 +19,11 @@ const CardList = async () => {
 
   const breedList = Object.keys(data.message);
 
-  return breedList.map((breedName) => (
+  return <div className="d-flex flex-row bg-black justify-between">
+   { breedList.map((breedName) => (
     <Card breedName={breedName} key={breedName}/>
-  ));
+  ))}
+  </div> 
 };
 
 export default CardList;
